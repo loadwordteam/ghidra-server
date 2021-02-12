@@ -1,0 +1,18 @@
+version: '3.6'
+services:
+  ghidra-server:
+    build:
+      context: ./ghidra/
+      dockerfile: Dockerfile
+    container_name: ghidra-server
+    hostname: 'ghidra.infrid.test'
+    environment:
+      - TERM=xterm-256color
+      - "GHIDRA_CERT_PASSWORD=$GHIDRA_CERT_PASSWORD"
+    ports:
+      - '13100:13100'
+      - '13101:13101'
+      - '13102:13102'
+    volumes:
+      - './volumes/repo:/srv/repositories:'
+      - './volumes/cert:/opt/ghidra/cert:'
