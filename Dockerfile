@@ -10,7 +10,6 @@ ARG ghidra_version=9.2.2_PUBLIC
 ARG ghidra_repo_path=/srv/repositories
 
 ENV LANG=C.UTF-8 \
-    GHIDRA_CERT_PASSWORD="" \
     GHIDRA_LISTEN_IP=0.0.0.0 \
     GHIDRA_HOME=${ghidra_install_path} \
     GHIDRA_REPO_DIR=${ghidra_repo_path} \
@@ -22,7 +21,6 @@ RUN apt-get -qq update \
     && apt-get -y install \
         locales \
         gettext-base \
-        apt-utils \
     && echo "${ghidra_sha256} ghidra.zip" | sha256sum -c \
     && unzip -qo ghidra.zip \
     && rm ghidra.zip \
