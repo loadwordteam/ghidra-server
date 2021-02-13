@@ -1,6 +1,7 @@
 version: '3.6'
 services:
   ghidra-server:
+    image: ghidra/server
     build:
       context: ./ghidra/
       dockerfile: Dockerfile
@@ -14,3 +15,9 @@ services:
       - '13102:13102'
     volumes:
       - './volumes/repo:/srv/repositories:'
+    networks:
+      - ghidra-server
+    restart: unless-stopped
+
+networks:
+  ghidra-server:
