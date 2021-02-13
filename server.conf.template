@@ -155,7 +155,7 @@ ghidra.repositories.dir=${GHIDRA_REPO_DIR}
 #                       used to store repositories.  Use of this variable to define the
 #                       repositories directory must be retained.
 wrapper.app.parameter.1=-a0
-wrapper.app.parameter.2=-i ${GHIDRA_LISTEN_IP}
+wrapper.app.parameter.2=-ip ${GHIDRA_LISTEN_IP}
 wrapper.app.parameter.3=-e2
 wrapper.app.parameter.4=${ghidra.repositories.dir}
 
