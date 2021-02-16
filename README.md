@@ -12,6 +12,8 @@ enough, needs a bit of care and patient to learn all the
 quirks. Unfortunately doesn't play nice with RedHat based system,
 that's why I wrote this Docekrfile.
 
+![Some cool dragon illustration](https://github.com/Infrid/ghidra-server/raw/master/dragon.jpg)
+
 ## Getting Started
 Read the files and the comments in the source code, this image is
 useful especially if you want to deploy on a Fedora/Centos/RedHat
@@ -55,3 +57,5 @@ This project is licensed under the MIT License - see the
 Thanks to [Giovanni "gionniboy" Pullara](https://github.com/gionniboy)
 and Filippo "joeyrs" Civiletti for the patience and kindness in
 answering all my questions and point me in the right direction.
+
+Image source available on [*Old book illustartions*](https://www.oldbookillustrations.com/illustrations/story-susa/)
