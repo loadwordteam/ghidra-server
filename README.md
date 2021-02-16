@@ -39,6 +39,24 @@ launching the service.
 
 * `/srv/repositories` - This directory holds your data when you work
   in ghidra, it's a good idea to backup it up.
+  
+#### Troubleshooting
+
+##### 1 command(s) queued.
+
+If you get this messace probably SELinux is holding your data from
+docker, change the context to `svirt_sandbox_file_t` or similar.
+
+##### Certificates do not conform to algorithm constraints
+
+Usually, ghidra server creates a self-signed certificate with a very
+weak algorithm, some gnu/Linux distribution like Fedora implements
+some security policies for preventing you to connect to such "unsafe"
+environments.
+
+For this reason the `entrypoint.sh` file creates the certificates with
+a stronger encryption, if you get this error check if you mounted the
+`GHIDRA_CERT_PATH` as volume!
 
 ## Authors
 
@@ -55,3 +73,6 @@ This project is licensed under the MIT License - see the
 Thanks to [Giovanni "gionniboy" Pullara](https://github.com/gionniboy)
 and Filippo "joeyrs" Civiletti for the patience and kindness in
 answering all my questions and point me in the right direction.
+
+Thanks to [Ash](https://github.com/QuarkTheAwesome) for writing about
+the certificates used by ghidra on [his website](https://heyquark.com/sysadmin/2020/11/14/ghidra-tls/).
