@@ -29,6 +29,8 @@ wrapper.java.additional.2=-DApplicationRollingFileAppender.maxBackupIndex=10
 # Ensure that classpath_frag is defined for service startup
 wrapper.java.additional.3=-Dclasspath_frag=${classpath_frag}
 
+# If you really feel up to tunnel the RMI connection in HTTP
+# wrapper.java.additional.4=-Dhttp.proxyHost
 # A suitable cacerts file must be installed when using PKI authentication
 #wrapper.java.additional.4=-Dghidra.cacerts=./Ghidra/cacerts
 
@@ -37,8 +39,8 @@ wrapper.java.additional.3=-Dclasspath_frag=${classpath_frag}
 # and specify the location and password via the properties below.
 # Be sure to properly set permissions on the Ghidra installation and this file
 # if using these settings.
-# wrapper.java.additional.5=-Dghidra.keystore=${GHIDRA_CERT_PATH}/keystore.jks
-# wrapper.java.additional.6=-Dghidra.password=${GHIDRA_CERT_PASSWORD}
+wrapper.java.additional.5=-Dghidra.keystore=${GHIDRA_CERT_PATH}/keystore.jks
+wrapper.java.additional.6=-Dghidra.password=${GHIDRA_CERT_PASSWORD}
 
 # Temporary Directory Setting - uncomment the following setting to override the Java default.
 # This may be necessary on certain Windows platforms when installing as a service.
@@ -155,7 +157,7 @@ ghidra.repositories.dir=${GHIDRA_REPO_DIR}
 #                       used to store repositories.  Use of this variable to define the
 #                       repositories directory must be retained.
 wrapper.app.parameter.1=-a0
-wrapper.app.parameter.2=-ip ${GHIDRA_LISTEN_IP}
+wrapper.app.parameter.2=-ip ${HOSTNAME}
 wrapper.app.parameter.3=-e2
 wrapper.app.parameter.4=${ghidra.repositories.dir}
 

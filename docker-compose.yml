@@ -2,22 +2,24 @@ version: '3.6'
 services:
   ghidra-server:
     image: ghidra/server
+    # Ghidra needs to know where the connections are coming from,
+    # hence we need to specify the hostname. This value will be also
+    # used in the server.conf for the -ip arg.
+    hostname: somehost.test
     build:
       context: ./ghidra/
       dockerfile: Dockerfile
     container_name: ghidra-server
-    hostname: 'ghidra.infrid.test'
-    environment:
-      - TERM=xterm-256color
+    env_file:
+      - '.env'
     ports:
       - '13100:13100'
       - '13101:13101'
       - '13102:13102'
     volumes:
-      - './volumes/repo:/srv/repositories:'
-    networks:
-      - ghidra-server
+      # You want your data to be persistent, let's mount some
+      # directories
+      - "./volumes/repo:/srv/repositories:"
+      - "./volumes/cert:$GHIDRA_CERT_PATH:"
     restart: unless-stopped
 
-networks:
-  ghidra-server:
