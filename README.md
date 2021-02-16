@@ -12,6 +12,8 @@ enough, needs a bit of care and patient to learn all the
 quirks. Unfortunately doesn't play nice with RedHat based system,
 that's why I wrote this Docekrfile.
 
+![Some cool dragon illustration](https://github.com/Infrid/ghidra-server/raw/master/dragon.jpg)
+
 ## Getting Started
 Read the files and the comments in the source code, this image is
 useful especially if you want to deploy on a Fedora/Centos/RedHat
@@ -76,3 +78,6 @@ answering all my questions and point me in the right direction.
 
 Thanks to [Ash](https://github.com/QuarkTheAwesome) for writing about
 the certificates used by ghidra on [his website](https://heyquark.com/sysadmin/2020/11/14/ghidra-tls/).
+
+Image source available on [*Old book illustartions*](https://www.oldbookillustrations.com/illustrations/story-susa/)
+
