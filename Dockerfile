@@ -43,10 +43,3 @@ EXPOSE 13100 13101 13102
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["./ghidraSvr", "console"]
 
-# PSX loader plugin
-FROM builder
-ARG ghidra_install_path
-ARG ghidra_psx_ldr_url=https://github.com/lab313ru/ghidra_psx_ldr/releases/download/v3.10/ghidra_9.2.1_PUBLIC_20210121_ghidra_psx_ldr.zip
-
-ADD $ghidra_psx_ldr_url ghidra_psx_ldr.zip
-RUN mv ghidra_psx_ldr.zip "${ghidra_install_path}/Extensions/"
