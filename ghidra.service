@@ -1,0 +1,24 @@
+# this is the unit file I use for systemd, make sure
+# it assumes the code lives in /opt/ghidra-server
+# feel free to edit the paths for your setup
+
+[Unit]
+Description=Ghidra service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+WorkingDirectory=/opt/ghidra-server
+
+# you need to create user and group first
+User=ghidra
+Group=ghidra
+
+ExecStart=/usr/local/sbin/docker-compose up -d --remove-orphans
+ExecStop=/usr/local/sbin/docker-compose down
+
+[Install]
+WantedBy=multi-user.target
+
