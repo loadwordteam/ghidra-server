@@ -1,3 +1,5 @@
+[![Docker Repository on Quay](https://quay.io/repository/infrid/ghidra-server/status "Docker Repository on Quay")](https://quay.io/repository/infrid/ghidra-server)
+
 # Non-trivial Ghidra Server Container
 My attempt to confine Ghidra server in a container for serious work
 and not just as once in a time deployment. There are various reasons
