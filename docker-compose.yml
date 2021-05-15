@@ -1,13 +1,13 @@
 version: '3.6'
 services:
   ghidra-server:
-    image: ghidra/server
+    image: infrid/ghidra-server
     # Ghidra needs to know where the connections are coming from,
     # hence we need to specify the hostname. This value will be also
     # used in the server.conf for the -ip arg.
     hostname: somehost.test
     build:
-      context: ./ghidra/
+      context: .
       dockerfile: Dockerfile
     container_name: ghidra-server
     env_file:
