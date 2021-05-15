@@ -14,7 +14,7 @@ enough, needs a bit of care and patient to learn all the
 quirks. Unfortunately doesn't play nice with RedHat based system,
 that's why I wrote this Docekrfile.
 
-![Some cool dragon illustration](https://github.com/Infrid/ghidra-server/raw/master/dragon.jpg)
+![Some cool dragon illustration](https://github.com/Infrid/ghidra-server/raw/main/dragon.jpg)
 
 ## Getting Started
 Read the files and the comments in the source code, this image is
