@@ -1,4 +1,4 @@
-# infrid/ghidra-server
+# loadwordteam/ghidra-server
 ARG ghidra_install_path=/opt/ghidra
 
 # We need an OpenJDK11 image NOT based on alpine (or anything with
@@ -7,9 +7,9 @@ ARG ghidra_install_path=/opt/ghidra
 FROM openjdk:11-jdk AS builder
 
 ARG ghidra_install_path
-ARG ghidra_url=https://ghidra-sre.org/ghidra_9.2.3_PUBLIC_20210325.zip
-ARG ghidra_sha256=9019c78f8b38d68fd40908b040466974a370e26ba51b2aaeafc744171040f714
-ARG ghidra_version=9.2.3_PUBLIC
+ARG ghidra_url=https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.1.1_build/ghidra_10.1.1_PUBLIC_20211221.zip
+ARG ghidra_sha256=d4ee61ed669cec7e20748462f57f011b84b1e8777b327704f1646c0d47a5a0e8
+ARG ghidra_version=10.1.1_PUBLIC
 ARG ghidra_repo_path=/srv/repositories
 
 ENV LANG=C.UTF-8 \

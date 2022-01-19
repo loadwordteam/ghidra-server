@@ -1,4 +1,4 @@
-[![Docker Repository on Quay](https://quay.io/repository/infrid/ghidra-server/status "Docker Repository on Quay")](https://quay.io/repository/infrid/ghidra-server)
+[![Docker Repository on Quay](https://quay.io/repository/loadwordteam/ghidra-server/status "Docker Repository on Quay")](https://quay.io/repository/loadwordteam/ghidra-server)
 
 # Non-trivial Ghidra Server Container
 My attempt to confine Ghidra server in a container for serious work
@@ -62,10 +62,22 @@ For this reason the `entrypoint.sh` file creates the certificates with
 a stronger encryption, if you get this error check if you mounted the
 `GHIDRA_CERT_PATH` as volume!
 
+##### Failed to process keystore: keystore.jks
+
+The server expects a keystore on start up, there is no automated
+script to create a keystore on the fly on the first run.
+
+You can force creation of a new keystore (and manage the users) by
+running bash in the container `docker-compose run ghidra-server bash`.
+
 ## Authors
 
 * **Gianluigi "Infrid" Cusimano** - *Initial work* and artist of
   making simple concept utterly complex.
+
+
+[![a project by load word team](https://loadwordteam.com/logo-lwt-small.png "a project by load word team")](https://loadwordteam.com)
+
 
 ## License
 
