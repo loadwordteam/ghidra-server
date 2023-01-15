@@ -157,9 +157,10 @@ ghidra.repositories.dir=${GHIDRA_REPO_DIR}
 #                       used to store repositories.  Use of this variable to define the
 #                       repositories directory must be retained.
 wrapper.app.parameter.1=-a0
-wrapper.app.parameter.2=-ip ${HOSTNAME}
-wrapper.app.parameter.3=-e2
-wrapper.app.parameter.4=${ghidra.repositories.dir}
+wrapper.app.parameter.2=-u
+wrapper.app.parameter.3=-ip ${HOSTNAME}
+wrapper.app.parameter.4=-e2
+wrapper.app.parameter.5=${ghidra.repositories.dir}
 
 # Establish server process owner
 # This should only be used when installing as a service using a nologin
